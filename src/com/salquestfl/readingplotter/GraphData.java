@@ -28,7 +28,7 @@
  * @brief   Class for managing an array of graph data
  *
  */
-package com.drakenclimber.graph;
+package com.salquestfl.readingplotter;
 
 import java.util.ArrayList;
 

@@ -1,10 +1,10 @@
-package com.hahasolutions.readingplotter;
+package com.salquestfl.readingplotter;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
-import android.util.Log;
+//import android.util.Log;
 import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 
 public class MainActivity extends Activity implements OnClickListener {
     
-    static final String ACT_NAME = "MainActivity";
+    //static final String TAG = "ReadingPlotter";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +28,14 @@ public class MainActivity extends Activity implements OnClickListener {
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.ButtonShowPlot:
-                //Log.i(ACT_NAME, "Show plot clicked");
+                //Log.i(TAG, "Show plot clicked");
                 Intent plotIntent = new Intent(this, PlotActivity.class);
                 startActivity(plotIntent);
                 break;
             case R.id.ButtonShowSettings:
-                //Log.i(ACT_NAME, "Show settings clicked");
+                //Log.i(TAG, "Show settings clicked");
+                Intent settingsIntent = new Intent(this, SettingsActivity.class);
+                startActivity(settingsIntent);
                 break;
         }
     }

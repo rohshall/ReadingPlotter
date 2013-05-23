@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:summary="@string/settings"
+            android:title="@string/settings" >
+        <EditTextPreference
+                android:key="device_id"
+                android:summary="@string/device_id"
+                android:title="@string/device_id" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

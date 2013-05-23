@@ -1,16 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:graph="http://schemas.android.com/apk/res/com.salquestfl.readingplotter"
     android:id="@+id/WidgetDataLayout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_alignParentTop="true">
 
-    <com.drakenclimber.graph.LineGraphView
+    <com.salquestfl.readingplotter.LineGraphView
        android:id="@+id/WidgetGraph"
        android:layout_width="fill_parent"
        android:layout_weight="1"
        android:layout_height="0dp"
-       title="@string/readings"
-       autoScale="true" />
+       graph:title="@string/title"
+       graph:autoScale="true" />
  </LinearLayout>

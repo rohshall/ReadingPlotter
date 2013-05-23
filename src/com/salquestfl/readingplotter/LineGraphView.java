@@ -28,7 +28,7 @@
  * @brief   Android widget for drawing a line graph
  *
  */
-package com.drakenclimber.graph;
+package com.salquestfl.readingplotter;
 
 import java.util.ArrayList;
 
@@ -38,7 +38,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.util.AttributeSet;
+import android.content.res.TypedArray;
 import android.view.View;
+import android.util.Log;
 
 public class LineGraphView extends View {
     private Paint paint;
@@ -53,17 +55,16 @@ public class LineGraphView extends View {
         super(context, attrs);
 
         dataSets = new ArrayList<GraphData>();
-
-        title = attrs.getAttributeValue(null, "title");
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.LineGraphView, 0, 0);
+        title = a.getString(R.styleable.LineGraphView_title);
         if (title == null) {
             title = "";
         }
-
-        this.autoScale = attrs.getAttributeBooleanValue(null, "autoScale",
-                false);
+        this.autoScale = a.getBoolean(R.styleable.LineGraphView_autoScale, false);
         this.verticalMarkers = 10;
 
         paint = new Paint();
+        a.recycle();
     }   /* LineGraphView() */
 
     /** method to override the standard android onDraw() method. */
